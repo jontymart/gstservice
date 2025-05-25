@@ -226,11 +226,28 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-name {
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 15px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+.card:hover .product-name {
+  color: #e67e22;
+  background: #fff;
 }
 
 .card img {
@@ -405,6 +422,16 @@ body {
   .products {
     padding: 15px;
   }
+  
+  .product-name {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .price {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -417,9 +444,14 @@ body {
     height: 130px;
   }
   
+  .product-name {
+    font-size: 13px;
+    padding: 6px;
+  }
+  
   .price {
-    padding: 8px;
-    font-size: 14px;
+    font-size: 13px;
+    padding: 6px;
   }
   
   .sidebar ul {
